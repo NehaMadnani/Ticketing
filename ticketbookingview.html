@@ -1,0 +1,358 @@
+<html>
+<head>
+  <style>
+  .container {
+    max-width: 1000px;
+    padding: 50px;
+    border: 1px solid #eee;
+    margin: auto;
+  }
+  .seat-block{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background: #ccc;
+    margin: 2px; 
+    border-radius: 5px;
+  }
+  .booked {
+    background: #003399;
+  }
+  .price-1 {
+    background: #66ccff;
+    /* price - 100 */
+  }
+  .price-2 {
+    background: #009aff;
+    /* price - 200 */
+  }
+  .price-details {
+    display: none;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background: #ededed;
+    float: right;
+    text-align: center;
+  }
+  
+  
+  .hidden {
+    display: none;
+    background: #ececec;
+  }
+    
+
+  .visible {
+    display: block;
+  }
+  .passageway {
+    margin: auto 50px;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .container {
+      max-width: 100%;
+      padding-bottom: 100px;
+    }
+    .price-details {
+      position: absolute;
+      bottom: 0;
+      right:0;
+      width: 100px;
+    }
+    .passageway {
+      margin: 5px;
+    }
+  }
+
+  </style>
+</head>
+<body>
+  
+  
+  <!-- Booking block parent -->
+  
+  <div class="container">
+    
+    <!-- Smaller blocks -->
+    
+    <div class="price-details" id="price-details"> 
+      The price for the chosen seat is 
+    </div>
+    <!-- R1 C1 -->
+    <div class="seat-block booked" onmouseover="showPrice('s-1')" onmouseout="hidePrice()" id="s-1"> 
+      
+    </div>
+    
+    <div class="seat-block price-1" onmouseover="showPrice('s-2')" id="s-2" onmouseout="hidePrice()"> 
+      
+    </div>
+    <div class="seat-block price-2" onmouseover="showPrice('s-3')" id="s-3" onmouseout="hidePrice()"> 
+    
+    </div>
+    <div class="seat-block" id="s-4" onmouseover="showPrice('s-4')" onmouseout="hidePrice()"> 
+      
+    </div>
+    
+    <!-- R1 C2 --> 
+    <span class="passageway"> </span>
+    <div class="seat-block booked" onmouseover="showPrice('s-1r')" onmouseout="hidePrice()" id="s-1r"> 
+      
+    </div>
+    
+    <div class="seat-block price-1" onmouseover="showPrice('s-2r')" id="s-2r" onmouseout="hidePrice()"> 
+      
+    </div>
+    <div class="seat-block price-2" onmouseover="showPrice('s-3r')" id="s-3r" onmouseout="hidePrice()"> 
+    
+    </div>
+    <div class="seat-block" id="s-4r" onmouseover="showPrice('s-4r')" onmouseout="hidePrice()"> 
+      
+    </div>
+    
+    
+    
+    <br>
+    <!-- R2 C1 -->
+    <div class="seat-block" onmouseover="showPrice('s-5')" onmouseout="hidePrice()" id="s-5"> 
+      
+    </div>
+    
+    <div class="seat-block price-2" onmouseover="showPrice('s-6')" onmouseout="hidePrice()" id="s-6"> 
+      
+    </div>
+    <div class="seat-block price-1" onmouseover="showPrice('s-7')" onmouseout="hidePrice()" id="s-7"> 
+    
+    </div>
+    <div class="seat-block price-1" id="s-8" onmouseover="showPrice('s-8')" onmouseout="hidePrice()"> 
+      
+    </div>
+    
+    
+    
+    
+    <!-- R2 C2 -->
+    
+    <span class="passageway"> </span>
+    <div class="seat-block price-1" onmouseover="showPrice('s-5r')" onmouseout="hidePrice()" id="s-5r"> 
+      
+    </div>
+    
+    <div class="seat-block price-1" onmouseover="showPrice('s-6r')" onmouseout="hidePrice()" id="s-6r"> 
+      
+    </div>
+    <div class="seat-block booked" onmouseover="showPrice('s-7r')" onmouseout="hidePrice()"  id="s-7r"> 
+    
+    </div>
+    <div class="seat-block" id="s-8r" onmouseover="showPrice('s-8r')" onmouseout="hidePrice()"> 
+      
+    </div>
+    
+    <br>
+    
+    
+    <!-- R3 C1-->
+    <div class="seat-block booked" onmouseover="showPrice('s-8')" onmouseout="hidePrice()" id="s-8"> 
+      
+    </div>
+    
+    <div class="seat-block booked" onmouseover="showPrice('s-9')" id="s-9"  onmouseout="hidePrice()"> 
+      
+    </div>
+    <div class="seat-block " onmouseover="showPrice('s-10')" id="s-10" onmouseout="hidePrice()" > 
+    
+    </div>
+    <div class="seat-block price-2" id="s-11" onmouseover="showPrice('s-11')" onmouseout="hidePrice()"> 
+      
+    </div>
+    
+    
+    
+    
+    <!-- R3 C2 -->
+    
+    <span class="passageway"> </span>
+    <div class="seat-block price-2" onmouseover="showPrice('s-8r')" onmouseout="hidePrice()" id="s-8r"> 
+      
+    </div>
+    
+    <div class="seat-block price-2" onmouseover="showPrice('s-9r')" id="s-9r" onmouseout="hidePrice()"> 
+      
+    </div>
+    <div class="seat-block price-1" onmouseover="showPrice('s-10r')" id="s-10r" onmouseout="hidePrice()"> 
+    
+    </div>
+    <div class="seat-block booked" id="s-11r" onmouseover="showPrice('s-11r')" onmouseout="hidePrice()"> 
+      
+    </div>
+    
+    <br>
+    
+    
+    <!-- R4 -->
+    
+    <!-- R4 C1-->
+    <div class="seat-block booked" onmouseover="showPrice('s-12')" onmouseout="hidePrice()" id="s-12"> 
+      
+    </div>
+    
+    <div class="seat-block booked" onmouseover="showPrice('s-13')" id="s-13" onmouseout="hidePrice()" > 
+      
+    </div>
+    <div class="seat-block booked" onmouseover="showPrice('s-14')" id="s-14" onmouseout="hidePrice()"> 
+    
+    </div>
+    <div class="seat-block booked" id="s-15" onmouseover="showPrice('s-15')" onmouseout="hidePrice()"> 
+      
+    </div>
+    
+    
+    
+    <!-- R4 C2 -->
+    
+    <span class="passageway"> </span>
+    <div class="seat-block price-1" onmouseover="showPrice('s-12r')" onmouseout="hidePrice()" id="s-12r"> 
+      
+    </div>
+    
+    <div class="seat-block price-2" onmouseover="showPrice('s-13r')" id="s-13r" onmouseout="hidePrice()"> 
+      
+    </div>
+    <div class="seat-block" onmouseover="showPrice('s-14r')" id="s-14r" onmouseout="hidePrice()"> 
+    
+    </div>
+    <div class="seat-block price-1" id="s-15r" onmouseover="showPrice('s-15r')" onmouseout="hidePrice()"> 
+      
+    </div>
+    
+    <br>
+    
+    
+    
+    <!-- R5 -->
+    
+    <!-- R5 C1-->
+    <div class="seat-block price-2" onmouseover="showPrice('s-16')" onmouseout="hidePrice()" id="s-16"> 
+      
+    </div>
+    
+    <div class="seat-block booked" onmouseover="showPrice('s-17')" id="s-17" onmouseout="hidePrice()"> 
+      
+    </div>
+    <div class="seat-block price-2" onmouseover="showPrice('s-18')" id="s-18" onmouseout="hidePrice()"> 
+    
+    </div>
+    <div class="seat-block price-2" id="s-19" onmouseover="showPrice('s-19')" onmouseout="hidePrice()"> 
+      
+    </div>
+    
+    
+    
+    
+    <!-- R5 C2 -->
+    
+    <span class="passageway"> </span>
+    <div class="seat-block price-1" onmouseover="showPrice('s-16r')" onmouseout="hidePrice()" id="s-16r"> 
+      
+    </div>
+    
+    <div class="seat-block price-2" onmouseover="showPrice('s-17r')" id="s-17r" onmouseout="hidePrice()"> 
+      
+    </div>
+    <div class="seat-block" onmouseover="showPrice('s-18r')" id="s-18r" onmouseout="hidePrice()"> 
+    
+    </div>
+    <div class="seat-block price-1" id="s-19r" onmouseover="showPrice('s-19r')" onmouseout="hidePrice()"> 
+      
+    </div>
+    
+    <br>
+    
+    
+    
+    <!-- R6 -->
+    
+    <!-- R6 C1-->
+    <div class="seat-block" onmouseover="showPrice('s-20')" onmouseout="hidePrice()" id="s-20"> 
+      
+    </div>
+    
+    <div class="seat-block price-1" onmouseover="showPrice('s-21')" id="s-21" onmouseout="hidePrice()"> 
+      
+    </div>
+    <div class="seat-block price-1" onmouseover="showPrice('s-22')" id="s-22" onmouseout="hidePrice()"> 
+    
+    </div>
+    <div class="seat-block price-2" id="s-23" onmouseover="showPrice('s-23')" onmouseout="hidePrice()"> 
+      
+    </div>
+    
+    
+    
+    
+    <!-- R6 C2 -->
+    
+    <span class="passageway"> </span>
+    <div class="seat-block price-1" onmouseover="showPrice('s-20r')" onmouseout="hidePrice()" id="s-20r"> 
+      
+    </div>
+    
+    <div class="seat-block price-2" onmouseover="showPrice('s-21r')" id="s-21r" onmouseout="hidePrice()"> 
+      
+    </div>
+    <div class="seat-block" onmouseover="showPrice('s-22r')" id="s-22r" onmouseout="hidePrice()"> 
+    
+    </div>
+    <div class="seat-block price-1" id="s-23r" onmouseover="showPrice('s-23r')" onmouseout="hidePrice()"> 
+      
+    </div>
+    
+    <br>
+    <br>
+  
+    
+    
+    
+  </div>
+  
+  
+</body>
+<script>
+
+function showPrice(id) {
+  let price_block = document.getElementById('price-details');
+  price_block.innerHTML="The price for the chosen seat is &nbsp;";
+  var statusPrice;
+  var hoveredBlock = document.getElementById(id) || {};
+  let classes = hoveredBlock.classList || [];
+  if (classes.contains('booked')) {
+    price_block.innerHTML="This seat is already &nbsp;";
+    statusPrice = document.createTextNode('Booked');
+  } else if (classes.contains('price-1')) {
+    statusPrice = document.createTextNode('Rupees 100');
+  } else if (classes.contains('price-2')) {
+    statusPrice = document.createTextNode('Rupees 200');
+  } else if (classes.contains('seat-block')) {
+    price_block.innerHTML="This seat can be reserved on request";
+  } else {
+    statusPrice = document.createTextNode('Please hover over preferred seat to know the price.');
+    price_block.innerHTML="Please hover over preferred seat to know the price."
+  }
+  price_block.appendChild(statusPrice);
+  price_block.classList.add("visible")
+  
+  
+}
+
+function hidePrice() {
+  let price_block = document.getElementById('price-details');
+  price_block.innerHTML="Please hover over preferred seat to know the price.";
+  price_block.classList.add("hidden");
+  
+}
+// On hover display modal with price 
+
+</script>
+</html>
